@@ -1,9 +1,13 @@
+import os
+
 import vertexai
 from vertexai.generative_models import GenerativeModel
 
-# TODO(developer): Update & uncomment line below
-# PROJECT_ID = "your-project-id"
-vertexai.init(project=PROJECT_ID, location="us-central1")
+# TODO: Rename ".env.template" to ".env" and add your project ID to it.
+from dotenv import load_dotenv
+load_dotenv()
+
+vertexai.init(project=os.environ.get('PROJECT_ID'), location="us-central1")
 
 model = GenerativeModel("gemini-1.5-flash-002")
 
