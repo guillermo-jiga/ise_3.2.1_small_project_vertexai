@@ -5,9 +5,10 @@ from vertexai.generative_models import GenerativeModel
 
 # TODO: Rename ".env.template" to ".env" and add your project ID to it.
 from dotenv import load_dotenv
+
 load_dotenv()
 
-vertexai.init(project=os.environ.get('PROJECT_ID'), location="us-central1")
+vertexai.init(project=os.environ.get("PROJECT_ID"), location="us-central1")
 
 model = GenerativeModel("gemini-1.5-flash-002")
 
